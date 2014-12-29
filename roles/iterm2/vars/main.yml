@@ -1,0 +1,2 @@
+home: Users/{{ ansible_user_id }}
+lib: /{{ home }}/Library/Preferences

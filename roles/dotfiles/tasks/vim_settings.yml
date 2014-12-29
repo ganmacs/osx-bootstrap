@@ -1,0 +1,7 @@
+---
+- name: install vim
+  homebrew: name=vim state=present
+
+- name: create link .vimrc from .dotfiles
+  file: src={{ dot_vim_dir }}/vimrc dest={{ vimrc_path }} state=link
+  ignore_errors: true

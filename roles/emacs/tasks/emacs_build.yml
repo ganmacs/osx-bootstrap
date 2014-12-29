@@ -1,0 +1,30 @@
+---
+- name: make sandbox
+  file: path={{build_home}} state=directory owner=ganmacs group=staff mode=0755
+
+- name: download emacs
+  get_url: url={{ emacs_repository }} dest={{build_home}}/{{emacs_file_tar}}
+
+- name: unurchived {{ emacs_file_tar }}
+  command: tar -zxvf {{ emacs_file_tar }} chdir={{build_home}}
+
+- name: install dependency lib
+  homebrew: name={{ item }} state=present
+  with_items:
+    - autoconf
+    - automake
+
+- name: download the inline patch
+  get_url: url={{ inline_path_path }} dest={{build_home}}/inline-patch
+
+- name: patch emacs
+  command: bash -lc "patch -p1 < ../inline-patch" chdir={{ build_home }}/{{emacs_file}}
+
+- name: build emacs
+  command: bash -lc "./configure --with-ns --without-x && make -j2 && make install" chdir={{ build_home }}/{{emacs_file}}
+
+- name: move Emacs.app to Application
+  command: mv {{build_emacs_path}} /Applications/Emacs.app
+
+- name: clean up file
+  command: rm -rf {{build_home}}

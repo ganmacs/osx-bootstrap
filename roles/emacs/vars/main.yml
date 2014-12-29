@@ -1,0 +1,18 @@
+---
+home: /Users/{{ ansible_user_id }}
+build_home: "{{home}}/sandbox"
+dot_emacs: "{{ home }}/.emacs.d"
+
+emacs_file: emacs-24.4
+emacs_file_tar: "{{emacs_file}}.tar.gz"
+build_emacs_path: "{{build_home}}/{{emacs_file}}/nextstep/Emacs.app"
+emacs_repository: http://ftpmirror.gnu.org/emacs/{{emacs_file_tar}}
+inline_path_path: http://plamo.linet.gr.jp/~matsuki/mac/emacs-24.4-20140417-inline.patch
+emacs_setting_repository: git@github.com:ganmacs/emacs.d.git
+
+
+emacs_packages:
+  - emacs
+  - cask
+  - cmigemo
+  - aspell

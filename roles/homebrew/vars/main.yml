@@ -1,0 +1,43 @@
+homebrew_tap_packages:
+  - homebrew/versions
+  - homebrew/science
+  - peco/peco
+
+homebrew_packages:
+  - { name: peco }
+  - { name: htop }
+  - { name: tree }
+  - { name: ag }
+  - { name: nkf }
+  - { name: imagemagick }
+  - { name: zsh}
+  - { name: z }
+  - { name: zsh-completions }
+  - { name: zsh-syntax-highlighting }
+  - { name: git }
+  - { name: hub }
+  - { name: tig }
+  - { name: git-now }
+  - { name: gauche }
+  - { name: go }
+  - { name: mysql }
+  - { name: markdown }
+  - { name: ghc }
+  - { name: leiningen }
+
+homebrew_cask_packages:
+  - seil
+  - dropbox
+  - licecap
+  - gyazo
+  - sequel-pro
+  - clipmenu
+  - xquartz
+  - google-chrome
+  - appcleaner
+  - github
+  - sourcetree
+  - bettertouchtool
+  - appcleaner
+  - google-japanese-ime
+  - kobito

@@ -1,0 +1,7 @@
+---
+- name: clone setting dofiles
+  git: repo={{ settings_repository }} dest={{ dotfiles }}
+
+- include: vim_settings.yml
+- include: git_settings.yml
+- include: zsh_settings.yml

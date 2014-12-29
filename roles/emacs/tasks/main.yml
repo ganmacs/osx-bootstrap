@@ -1,0 +1,11 @@
+---
+- include: emacs_build.yml
+- include: emacs_package.yml
+
+- name: clone emacs setting from github
+  git: >
+    repo={{ emacs_setting_repository }}
+    dest={{ dot_emacs }}
+
+- name: exec cask install
+  command: cask install chdir={{ dot_emacs }}

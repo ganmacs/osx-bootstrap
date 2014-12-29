@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  roles:
+    - homebrew
+    - dotfiles
+    - emacs
+    - ruby
+    - iterm2
+    - kobito
+    - karabiner

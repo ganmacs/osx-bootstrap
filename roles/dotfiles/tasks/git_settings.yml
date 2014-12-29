@@ -1,0 +1,12 @@
+---
+
+- name: install git
+  homebrew: name=git state=present
+
+- name: create link .gitconfig from .dotfiles
+  file: src={{ dot_git_dir }}/gitconfig dest={{ gitconfig_path }} state=link
+  ignore_errors: true
+
+- name: create link .gitignore from .dotfiles
+  file: src={{ dot_git_dir }}/gitignore_global dest={{ gitignore_path }} state=link
+  ignore_errors: true

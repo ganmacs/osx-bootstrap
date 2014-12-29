@@ -1,0 +1,8 @@
+---
+- name: install iterm2
+  homebrew_cask: name=iterm2 state=present
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+
+- name: copy setting
+  copy: src=com.googlecode.iterm2.plist dest={{ lib }}
