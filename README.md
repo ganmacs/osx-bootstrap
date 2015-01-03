@@ -27,5 +27,5 @@ $ brew install ansible
 ### Usage
 
 ```
-$ ansible-playbook -i localhost main.yml -K
+$ ansible-playbook -i localhost site.yml -K
 ```
