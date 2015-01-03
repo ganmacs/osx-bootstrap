@@ -5,3 +5,4 @@
 - include: vim_settings.yml
 - include: git_settings.yml
 - include: zsh_settings.yml
+- include: amethyst_settings.yml
