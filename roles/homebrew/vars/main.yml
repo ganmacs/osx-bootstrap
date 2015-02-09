@@ -41,3 +41,5 @@ homebrew_cask_packages:
   - appcleaner
   - google-japanese-ime
   - kobito
+  - virtualbox
+  - vagrant
