@@ -2,4 +2,4 @@
 
 - name: install {{item}}
   homebrew: name=emacs state=present
-  with_item: emacs_packages
+  with_items: emacs_packages
