@@ -1,6 +1,6 @@
 ---
 - name: make sandbox
-  file: path={{build_home}} state=directory owner=ganmacs group=staff mode=0755
+  file: path={{build_home}} state=directory owner={{ansible_user_id}} group=staff mode=0755
 
 - name: download emacs
   get_url: url={{ emacs_repository }} dest={{build_home}}/{{emacs_file_tar}}
