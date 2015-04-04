@@ -16,5 +16,5 @@
 - name: create link .zshrc from .dotfiles
   file: src={{ dot_zsh_dir }}/zshrc dest={{ zshrc_path }} state=link
 
-- name: colne zaw
+- name: clone zaw
   git: repo=git://github.com/zsh-users/zaw.git dest={{ zaw_path }}
