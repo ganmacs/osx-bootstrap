@@ -24,6 +24,7 @@ homebrew_packages:
   - { name: markdown }
   - { name: ghc }
   - { name: leiningen }
+  - { name: coreutils }
 
 homebrew_cask_packages:
   - seil
