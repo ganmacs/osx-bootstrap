@@ -1,8 +1,6 @@
 ---
 - name: install iterm2
   homebrew_cask: name=iterm2 state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
 
 - name: create link iterm
   file: src={{iterm_dir}}/com.googlecode.iterm2.plist dest={{ lib }}/com.googlecode.iterm2.plist state=link force=yes

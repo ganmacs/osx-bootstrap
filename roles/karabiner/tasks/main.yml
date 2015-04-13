@@ -1,8 +1,6 @@
 ---
 - name: install karabiner
   homebrew_cask: name=karabiner state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
 
 - name: copy setting
   file: src={{karabiner_dir}}/org.pqrs.Karabiner.plist  dest={{ lib }}/org.pqrs.Karabiner.plist state=link force=yes

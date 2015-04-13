@@ -1,8 +1,6 @@
 ---
 - name: install kobito
   homebrew_cask: name=kobito state=present
-  environment:
-    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
 
 - name: create link kobito.db
   file: src={{kobito_dir}}/kobito.db dest={{ lib_dir }}/kobito.db state=link force=yes
