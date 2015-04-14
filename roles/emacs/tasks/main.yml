@@ -1,6 +1,6 @@
 ---
 - include: emacs_build.yml
-- include: emacs_package.yml
+- include: emacs_packages.yml
 
 - name: clone emacs setting from github
   git: >
