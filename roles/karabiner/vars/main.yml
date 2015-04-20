@@ -1,3 +1,2 @@
-home: Users/{{ ansible_user_id }}
-lib: /{{ home }}/Library/Preferences/
-karabiner_dir: /{{ home }}/Dropbox/Apps/karabiner
+lib: /Users/{{ ansible_user_id }}/Library/Preferences/
+karabiner_dir: /Users/{{ ansible_user_id }}/Dropbox/Apps/karabiner

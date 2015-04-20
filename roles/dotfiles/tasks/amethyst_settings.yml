@@ -3,5 +3,5 @@
   homebrew_cask: name=amethyst state=present
 
 - name: create link .amethyst from amethyst file
-  file: src={{ dot_amethyst_dir }}/amethyst dest={{ amethyst_path }} state=link
+  file: src={{ dotfiles }}/amethyst/amethyst dest=/Users/{{ ansible_user_id }}/.amethyst state=link
   ignore_errors: true

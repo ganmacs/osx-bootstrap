@@ -1,18 +1,3 @@
 ---
-settings_repository: git@github.com:ganmacs/dotfiles.git
-zsh_path: /usr/local/bin/zsh
-
-home: Users/{{ ansible_user_id }}
-dotfiles:    /{{ home }}/.dotfiles
-dot_vim_dir: /{{ home }}/.dotfiles/vim
-dot_git_dir: /{{ home }}/.dotfiles/git
-dot_zsh_dir: /{{ home }}/.dotfiles/zsh
-dot_amethyst_dir: /{{ home }}/.dotfiles/amethyst
-
-vimrc_path:     /{{ home }}/.vimrc
-gitconfig_path: /{{ home }}/.gitconfig
-gitignore_path: /{{ home }}/.gitignore_global
-zshenv_path:    /{{ home }}/.zshenv
-zshrc_path:     /{{ home }}/.zshrc
-zaw_path:       /{{ home }}/.zaw
-amethyst_path:  /{{ home }}/.amethyst
+settings_repository: https://github.com/ganmacs/dotfiles.git
+dotfiles:    /Users/{{ ansible_user_id }}/.dotfiles
