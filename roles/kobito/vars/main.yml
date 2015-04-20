@@ -1,3 +1,2 @@
-home: Users/{{ ansible_user_id }}
-lib_dir: /{{ home }}/Library/Kobito
-kobito_dir: /{{ home }}/Dropbox/Apps/Kobito
+lib_dir: Users/{{ ansible_user_id }}/Library/Kobito
+kobito_dir: Users/{{ ansible_user_id }}/Dropbox/Apps/Kobito
