@@ -3,7 +3,7 @@ home: /Users/{{ ansible_user_id }}
 build_home: "{{home}}/sandbox"
 dot_emacs: "{{ home }}/.emacs.d"
 
-emacs_file: emacs-24.4
+emacs_file: emacs-24.5
 emacs_file_tar: "{{emacs_file}}.tar.gz"
 build_emacs_path: "{{build_home}}/{{emacs_file}}/nextstep/Emacs.app"
 emacs_repository: http://ftpmirror.gnu.org/emacs/{{emacs_file_tar}}
