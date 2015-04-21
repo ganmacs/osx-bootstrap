@@ -4,9 +4,9 @@
   homebrew: name=git state=present
 
 - name: create link .gitconfig from .dotfiles
-  file: src={{ dotfiles }}/git/gitconfig dest=/Users/{{ ansible_user_id }}/.gitconfig state=link
+  file: src={{ dotfiles }}/git/gitconfig dest=/Users/{{ ansible_user_id }}/.gitconfig state=link force=true
   ignore_errors: true
 
 - name: create link .gitignore from .dotfiles
-  file: src={{ dotfiles }}/git/gitignore_global dest=/Users/{{ ansible_user_id }}/.gitignore_global state=link
+  file: src={{ dotfiles }}/git/gitignore_global dest=/Users/{{ ansible_user_id }}/.gitignore_global state=link force=true
   ignore_errors: true

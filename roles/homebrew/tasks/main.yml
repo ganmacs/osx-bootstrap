@@ -6,8 +6,8 @@
 - name: brew update & brew upgrade
   homebrew: update_homebrew=yes upgrade_all=yes
 
+- include: homebrew-cask.yml
+
 - name: brew install packages
   homebrew: name={{ item.name }} state={{ item.state|default("present") }} install_options={{ item.install_options|default() }}
   with_items: homebrew_packages
-
-- include: homebrew-cask.yml

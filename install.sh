@@ -30,7 +30,7 @@ fi
 brew install ansible
 
 # Run installer
- ansible-playbook -i localhost site.yml -K
+ansible-playbook -i localhost site.yml -K
 
 # Move to original path
 popd > /dev/null

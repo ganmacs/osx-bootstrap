@@ -17,4 +17,4 @@
   file: src={{ dotfiles }}/zsh/zshrc dest=/Users/{{ ansible_user_id }}/.zshrc state=link force=yes
 
 - name: clone zaw
-  git: repo=git://github.com/zsh-users/zaw.git dest=/Users/{{ ansible_user_id }}/.zaw
+  git: repo=https://github.com/zsh-users/zaw.git dest=/Users/{{ ansible_user_id }}/.zaw
