@@ -3,6 +3,7 @@ homebrew_tap_packages:
   - homebrew/science
   - peco/peco
   - motemen/ghq
+  - homebrew/dupes
 
 homebrew_packages:
   - { name: peco }
@@ -24,11 +25,19 @@ homebrew_packages:
   - { name: mysql }
   - { name: markdown }
   - { name: ghc }
+  - { name: cabal-install }
   - { name: leiningen }
   - { name: coreutils }
   - { name: ghq }
   - { name: scala }
   - { name: sbt }
+  - { name: mercurial }
+  - { name: aspell }
+  - { name: gawk }
+  - { name: gnu-sed }
+  - { name: gnue-tar }
+  - { name: grep }
+  - { name: jq }
 
 homebrew_cask_packages:
   - seil
