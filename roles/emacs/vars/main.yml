@@ -2,6 +2,7 @@
 home: /Users/{{ ansible_user_id }}
 build_home: "{{home}}/sandbox"
 dot_emacs: "{{ home }}/.emacs.d"
+emacs_repo: "{{ home }}/src/github.com/ganmacs/emacs.d"
 
 emacs_file: emacs-24.5
 emacs_file_tar: "{{emacs_file}}.tar.gz"

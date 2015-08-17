@@ -5,7 +5,11 @@
 - name: clone emacs setting from github
   git: >
     repo={{ emacs_setting_repository }}
-    dest={{ dot_emacs }}
+    dest={{ emacs_repo }}
+
+- name: create link .emacs.d from emacs.d
+  file: src={{ emacs_repo }} dest={{ dot_emacs }} state=link
+  ignore_errors: true
 
 - name: exec cask install
   command: cask install chdir={{ dot_emacs }}

@@ -1,4 +1,7 @@
 ---
+- name: create directory for ghq
+  file: path={{ dotfiles }} state=directory owner={{ ansible_user_id }} group=staff mode=0755
+
 - name: clone setting dofiles
   git: repo={{ settings_repository }} dest={{ dotfiles }}
 
