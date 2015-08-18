@@ -35,7 +35,7 @@ homebrew_packages:
   - { name: aspell }
   - { name: gawk }
   - { name: gnu-sed }
-  - { name: gnue-tar }
+  - { name: gnu-tar }
   - { name: grep }
   - { name: jq }
 
