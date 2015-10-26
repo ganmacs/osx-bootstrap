@@ -1,7 +1,6 @@
 homebrew_tap_packages:
   - homebrew/versions
   - homebrew/science
-  - peco/peco
   - motemen/ghq
   - homebrew/dupes
 
@@ -38,10 +37,14 @@ homebrew_packages:
   - { name: gnu-tar }
   - { name: grep }
   - { name: jq }
+  - { name: global }
+  - { name: gibo }
+  - { name: elixir }
+  - { name: mecab }
 
 homebrew_cask_packages:
-  - seil
   - dropbox
+  - seil
   - licecap
   - gyazo
   - sequel-pro
@@ -49,7 +52,6 @@ homebrew_cask_packages:
   - xquartz
   - google-chrome
   - appcleaner
-  - github
   - sourcetree
   - bettertouchtool
   - appcleaner
