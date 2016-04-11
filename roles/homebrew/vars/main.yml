@@ -1,7 +1,7 @@
 homebrew_tap_packages:
+  - caskroom/cask
   - homebrew/versions
   - homebrew/science
-  - motemen/ghq
   - homebrew/dupes
 
 homebrew_packages:
@@ -12,14 +12,11 @@ homebrew_packages:
   - { name: nkf }
   - { name: imagemagick }
   - { name: zsh}
-  - { name: z }
   - { name: zsh-completions }
   - { name: zsh-syntax-highlighting }
   - { name: git }
   - { name: hub }
-  - { name: tig }
   - { name: git-now }
-  - { name: gauche }
   - { name: go }
   - { name: mysql }
   - { name: markdown }
@@ -41,6 +38,9 @@ homebrew_packages:
   - { name: gibo }
   - { name: elixir }
   - { name: mecab }
+  - { name: rust }
+  - { name: rbenv-default-gems }
+  - { name: graphviz }
 
 homebrew_cask_packages:
   - dropbox
@@ -56,6 +56,5 @@ homebrew_cask_packages:
   - bettertouchtool
   - appcleaner
   - google-japanese-ime
-  - kobito
   - virtualbox
   - vagrant
