@@ -8,12 +8,6 @@
 - name: unurchived {{ emacs_file_tar }}
   command: tar -zxvf {{ emacs_file_tar }} chdir={{build_home}}
 
-- name: install dependency lib
-  homebrew: name={{ item }} state=present
-  with_items:
-    - autoconf
-    - automake
-
 - name: download the inline patch
   get_url: url={{ inline_path_path }} dest={{build_home}}/inline-patch
 

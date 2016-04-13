@@ -47,9 +47,16 @@ homebrew_packages:
   - { name: readline }
   - { name: ruby-build }
   - { name: rbenv }
+  - { name: iterm2 }
+  - { name: karabiner }
+  - { name: autoconf }
+  - { name: automake }
+  - { name: cask }
+  - { name: argon/mas/mas }
 
 homebrew_cask_packages:
   - dropbox
+  - java
   - seil
   - licecap
   - gyazo
