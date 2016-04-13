@@ -1,7 +1,0 @@
----
-
-- name: install gems - {{item}}
-  gem: name={{ item }} state=present
-  with_items:
-    - bundler
-    - rubocop

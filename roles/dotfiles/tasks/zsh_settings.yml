@@ -1,7 +1,4 @@
 ---
-- name: install zsh
-  homebrew: name=zsh state=present
-
 - name: add shells to zsh_path
   lineinfile: dest=/etc/shells line=/usr/local/bin/zsh state=present owner=root group=wheel mode=0644
   sudo: yes
@@ -15,6 +12,3 @@
 
 - name: create link .zshrc from .dotfiles
   file: src={{ dotfiles }}/zsh/zshrc dest=/Users/{{ ansible_user_id }}/.zshrc state=link force=yes
-
-- name: clone zaw
-  git: repo=https://github.com/zsh-users/zaw.git dest=/Users/{{ ansible_user_id }}/.zaw

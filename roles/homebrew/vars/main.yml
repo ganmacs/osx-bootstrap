@@ -41,6 +41,12 @@ homebrew_packages:
   - { name: rust }
   - { name: rbenv-default-gems }
   - { name: graphviz }
+  - { name: vim }
+  - { name: zsh }
+  - { name: openssl }
+  - { name: readline }
+  - { name: ruby-build }
+  - { name: rbenv }
 
 homebrew_cask_packages:
   - dropbox

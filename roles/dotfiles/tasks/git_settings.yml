@@ -1,8 +1,4 @@
 ---
-
-- name: install git
-  homebrew: name=git state=present
-
 - name: create link .gitconfig from .dotfiles
   file: src={{ dotfiles }}/git/gitconfig dest=/Users/{{ ansible_user_id }}/.gitconfig state=link force=true
   ignore_errors: true
