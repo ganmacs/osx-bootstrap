@@ -27,6 +27,7 @@ homebrew_packages:
   - { name: ghq }
   - { name: scala }
   - { name: sbt }
+  - { name: cmigemo }
   - { name: mercurial }
   - { name: aspell }
   - { name: gawk }
@@ -47,15 +48,21 @@ homebrew_packages:
   - { name: readline }
   - { name: ruby-build }
   - { name: rbenv }
-  - { name: iterm2 }
-  - { name: karabiner }
   - { name: autoconf }
+  - { name: autocode }
   - { name: automake }
   - { name: cask }
   - { name: argon/mas/mas }
+  - { name: brew-cask }
+  - { name: icu4c }
+  - { name: the_silver_searcher }
+  - { name: pkg-config }
+  - { name: emacs }
+  - { name: gcc }
 
 homebrew_cask_packages:
   - dropbox
+  - iterm2
   - java
   - seil
   - licecap
@@ -64,10 +71,23 @@ homebrew_cask_packages:
   - clipmenu
   - xquartz
   - google-chrome
+  - google-drive
+  - google-japanese-ime
   - appcleaner
+  - ccleaner
   - sourcetree
   - bettertouchtool
-  - appcleaner
-  - google-japanese-ime
   - virtualbox
   - vagrant
+  - karabiner
+  - skim
+  - amethyst
+
+appstore_apps:
+  - 443987910  # 1Password
+  - 961632517  # Pomodoro Time Pro
+  - 409183694  # Keynote
+  - 422304217  # Day One Classic
+  - 467939042  # Growl
+  - 485812721  # TweetDeck
+  - 1037994372 # DrCleanerPro

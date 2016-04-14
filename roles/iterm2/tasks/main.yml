@@ -1,3 +1,0 @@
----
-- name: create link iterm
-  file: src={{iterm_dir}}/com.googlecode.iterm2.plist dest={{ lib }}/com.googlecode.iterm2.plist state=link force=yes

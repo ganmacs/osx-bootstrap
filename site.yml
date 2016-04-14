@@ -2,10 +2,8 @@
 
 - hosts: localhost
   roles:
+    - osx-defaults
     - homebrew
     - dotfiles
-    - iterm2
-    - karabiner
     - emacs
-    - osx
-    - ruby
+    - apps

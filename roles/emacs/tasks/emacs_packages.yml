@@ -1,5 +1,0 @@
----
-
-- name: install {{item}}
-  homebrew: name=emacs state=present
-  with_items: emacs_packages

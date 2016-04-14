@@ -1,4 +1,0 @@
----
-- name: create link .vimrc from .dotfiles
-  file: src={{ dotfiles }}/vim/vimrc dest=/Users/{{ ansible_user_id }}/.vimrc state=link
-  ignore_errors: true

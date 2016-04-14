@@ -1,2 +1,0 @@
-lib: /Users/{{ ansible_user_id }}/Library/Preferences
-iterm_dir: /Users/{{ ansible_user_id }}/Dropbox/Apps/iTerm2

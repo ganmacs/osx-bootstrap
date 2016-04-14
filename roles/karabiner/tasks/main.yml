@@ -1,5 +1,0 @@
----
-- name: copy setting
-  file: src={{karabiner_dir}}/org.pqrs.Karabiner.plist  dest={{ lib }}/org.pqrs.Karabiner.plist state=link force=yes
-  notify:
-    - reload the karabier xml

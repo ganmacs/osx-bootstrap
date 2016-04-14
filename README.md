@@ -1,10 +1,6 @@
 # OS X bootstrap
 
-### Requirement
-
-* MAC OS X (Yosemite)
-* homebrew
-* ansible
+Bootstrap MAC OS X (El Captain only) for ganmacs
 
 ### Usage
 

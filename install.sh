@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
 
-tempfile=/tmp/dotfiles.zip
-workspace=/tmp/dotfiles
+TMPFILE="/tmp/dotfiles.zip"
+WORKSPACE="/tmp/dotfiles"
 
-curl -LSfs -o ${tempfile} https://github.com/ganmacs/osx-bootstrap/archive/master.zip
+curl -LSfs -o ${TMPFILE} https://github.com/ganmacs/osx-bootstrap/archive/master.zip
+unzip -oq ${TMPFILE} -d ${WORKSPACE}
 
-# Unzip installer into workspace
-unzip -oq ${tempfile} -d ${workspace}
+pushd ${WORKSPACE}/osx-bootstrap-master > /dev/null
 
-# Move to repository root path
-pushd ${workspace}/osx-bootstrap-master > /dev/null
-
-# Install command-line-tools
 if [[ ! -d /usr/include ]]; then
   PLACEHOLDER=/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
   touch $PLACEHOLDER
@@ -20,20 +16,14 @@ if [[ ! -d /usr/include ]]; then
   [[ -f $PLACEHOLDER ]] && rm $PLACEHOLDER
 fi
 
-# Install homebrew
 which brew > /dev/null
 if [ "$?" -ne 0 ]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Install ansible
-brew install ansible
-
-# Run installer
+brew install ansible --HEAD
 ansible-playbook -i localhost site.yml -K
 
-# Move to original path
 popd > /dev/null
 
-# Cleanup
-rm -rf ${tempfile} ${workspace}
+rm -rf ${TMPFILE} ${WORKSPACE}

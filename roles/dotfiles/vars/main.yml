@@ -1,3 +1,12 @@
 ---
 settings_repository: https://github.com/ganmacs/dotfiles.git
-dotfiles:    /Users/{{ ansible_user_id }}/src/github.com/ganmacs/dotfiles
+dotfiles: /Users/{{ ansible_user_id }}/src/github.com/ganmacs/dotfiles
+links:
+  - { src: "{{ dotfiles }}/peco" , dest: "/Users/{{ ansible_user_id }}/.peco" }
+  - { src: "{{ dotfiles }}/vim/vimrc" , dest: "/Users/{{ ansible_user_id }}/.vimrc" }
+  - { src: "{{ dotfiles }}/rubocop/rubocop" , dest: "/Users/{{ ansible_user_id }}/.rubocop" }
+  - { src: "{{ dotfiles }}/rbenv/default-gems"  , dest: "/Users/{{ ansible_user_id }}/.rbenv/default-gems" }
+  - { src: "{{ dotfiles }}/git/gitconfig"  , dest: "/Users/{{ ansible_user_id }}/.gitconfig" }
+  - { src: "{{ dotfiles }}/git/gitignore_global"  , dest: "/Users/{{ ansible_user_id }}/.gitignore_global" }
+  - { src: "{{ dotfiles }}/amethyst/amethyst"  , dest: "/Users/{{ ansible_user_id }}/.amethyst" }
+  - { src: "{{ dotfiles }}/zsh/zshrc"  , dest: "/Users/{{ ansible_user_id }}/.zshrc" }

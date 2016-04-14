@@ -1,8 +1,0 @@
----
-- name: install ruby {{ ruby_version }}
-  shell: bash -lc "rbenv install {{ ruby_version }}"
-  ignore_errors: true
-
-- name: user ruby {{ ruby_version }}
-  shell: bash -lc "rbenv global {{ ruby_version }} && rbenv rehash"
-  ignore_errors: true

@@ -1,2 +1,0 @@
-- name: reload the karabiner xml
-  shell: /Applications/Karabiner.app/Contents/Library/bin/karabiner reloadxml

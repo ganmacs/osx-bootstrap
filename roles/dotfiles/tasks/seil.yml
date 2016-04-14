@@ -1,0 +1,4 @@
+---
+
+- name: setup seil
+  command: sh {{dotfiles}}/seil/config.sh

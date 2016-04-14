@@ -1,0 +1,15 @@
+---
+- name: Setup OS X defaults
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type | default(omit) }}"
+    value: "{{ item.value }}"
+    state: present
+  notify:
+    - "{{ item.notify | default(omit) }}"
+  with_items:
+    - "{{ osx_defaults }}"
+
+- name: set menuExtras
+  command: defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/TextInput.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"

@@ -1,2 +1,0 @@
-lib: /Users/{{ ansible_user_id }}/Library/Preferences/
-karabiner_dir: /Users/{{ ansible_user_id }}/Dropbox/Apps/karabiner
