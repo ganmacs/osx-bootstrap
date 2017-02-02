@@ -1,2 +1,0 @@
-- name: setup karabiner
-  command: sh {{dotfiles}}/karabiner/config.sh

@@ -5,16 +5,3 @@
 - name: user ruby {{ ruby_version }}
   shell: bash -lc "rbenv global {{ ruby_version }} && rbenv rehash"
   ignore_errors: true
-
-- name: curl shortcut app
-  shell: curl -LSfs -o shortcut.zip https://github.com/siong1987/shortcuts/releases/download/1.0.0/restart.sleep.shutdown.logout.lock.zip
-
-- name: unzip shortcut app
-  shell: unzip -oq shortcut.zip -d shortcut
-
-- name: shortcut3
-  copy: src=shortcut/system/{{item}} dest=/Applications/{{item}} owner={{ ansible_user_id }} group=staff mode=0755
-  with_items:
-    - "Restart.app"
-    - "Shutdown.app"
-    - "Sleep.app"

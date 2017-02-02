@@ -10,3 +10,5 @@ links:
   - { src: "{{ dotfiles }}/git/gitignore_global"  , dest: "/Users/{{ ansible_user_id }}/.gitignore_global" }
   - { src: "{{ dotfiles }}/amethyst/amethyst"  , dest: "/Users/{{ ansible_user_id }}/.amethyst" }
   - { src: "{{ dotfiles }}/zsh/zshrc"  , dest: "/Users/{{ ansible_user_id }}/.zshrc" }
+  - { src: "{{ dotfiles }}/hammerspoon"  , dest: "/Users/{{ ansible_user_id }}/.hammerspoon" }
+  - { src: "{{ dotfiles }}/karabiner/karabiner.json"  , dest: "/Users/{{ ansible_user_id }}/.config/karabiner/karabiner.json" }

@@ -40,14 +40,14 @@ homebrew_packages:
   - { name: elixir }
   - { name: mecab }
   - { name: rust }
+  - { name: rbenv }
+  - { name: tmux }
   - { name: rbenv-default-gems }
   - { name: graphviz }
   - { name: vim }
-  - { name: zsh }
   - { name: openssl }
   - { name: readline }
   - { name: ruby-build }
-  - { name: rbenv }
   - { name: autoconf }
   - { name: autocode }
   - { name: automake }
@@ -61,17 +61,14 @@ homebrew_packages:
   - { name: gcc }
 
 homebrew_cask_packages:
-  - dropbox
   - iterm2
   - java
   - seil
   - licecap
-  - gyazo
   - sequel-pro
   - clipmenu
   - xquartz
   - google-chrome
-  - google-drive
   - google-japanese-ime
   - appcleaner
   - ccleaner
@@ -79,7 +76,7 @@ homebrew_cask_packages:
   - bettertouchtool
   - virtualbox
   - vagrant
-  - karabiner
+  - karabiner-element
   - skim
   - amethyst
 
