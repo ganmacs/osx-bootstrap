@@ -19,6 +19,7 @@ homebrew_packages:
   - { name: git-now }
   - { name: go }
   - { name: mysql }
+  - { name: mycli }
   - { name: markdown }
   - { name: ghc }
   - { name: cabal-install }
@@ -39,7 +40,6 @@ homebrew_packages:
   - { name: gibo }
   - { name: elixir }
   - { name: mecab }
-  - { name: rust }
   - { name: rbenv }
   - { name: tmux }
   - { name: rbenv-default-gems }
@@ -68,7 +68,6 @@ homebrew_cask_packages:
   - java
   - licecap
   - sequel-pro
-  - clipmenu
   - xquartz
   - google-chrome
   - google-japanese-ime
@@ -80,6 +79,7 @@ homebrew_cask_packages:
   - vagrant
   - skim
   - amethyst
+  # - clipmenu https://github.com/caskroom/homebrew-cask/commit/067126917c87f4da91e26ba036799842a09a6a59
 
 appstore_apps:
   - 443987910  # 1Password

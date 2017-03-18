@@ -15,7 +15,7 @@
   command: bash -lc "patch -p1 < ../inline-patch" chdir={{ build_home }}/{{emacs_file}}
 
 - name: build emacs
-  command: bash -lc "./configure --with-ns --without-x -with-modules && make boostrap -j2 && make install -j2" chdir={{ build_home }}/{{emacs_file}}
+  command: bash -lc "./configure --with-ns --without-x -with-modules && make bootstrap -j2 && make install -j2" chdir={{ build_home }}/{{emacs_file}}
 
 - name: move Emacs.app to Application
   command: mv {{build_emacs_path}} /Applications/Emacs.app
