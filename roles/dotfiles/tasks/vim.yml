@@ -1,0 +1,2 @@
+- name: create directory for vim tmp
+  file: path=/Users/{{ ansible_user_id }}/.vim/tmp state=directory owner={{ ansible_user_id }} group=staff mode=0755

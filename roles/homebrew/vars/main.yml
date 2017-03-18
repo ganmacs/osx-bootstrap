@@ -59,11 +59,13 @@ homebrew_packages:
   - { name: pkg-config }
   - { name: emacs }
   - { name: gcc }
+  - { name: tmux }
+  - { name: reattach-to-user-namespace }
+  - { name: direnv }
 
 homebrew_cask_packages:
   - iterm2
   - java
-  - seil
   - licecap
   - sequel-pro
   - clipmenu
@@ -76,7 +78,6 @@ homebrew_cask_packages:
   - bettertouchtool
   - virtualbox
   - vagrant
-  - karabiner-element
   - skim
   - amethyst
 
