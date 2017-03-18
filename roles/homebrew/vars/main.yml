@@ -53,7 +53,6 @@ homebrew_packages:
   - { name: automake }
   - { name: cask }
   - { name: argon/mas/mas }
-  - { name: brew-cask }
   - { name: icu4c }
   - { name: the_silver_searcher }
   - { name: pkg-config }

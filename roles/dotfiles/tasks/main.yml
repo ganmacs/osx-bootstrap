@@ -8,6 +8,9 @@
 - name: create .rbenv
   file: path=/Users/{{ ansible_user_id }}/.rbenv state=directory owner={{ ansible_user_id }} group=staff mode=0755
 
+- name: create .config/karabier
+  file: path=/Users/{{ ansible_user_id }}/.config/karabiner state=directory owner={{ ansible_user_id }} group=staff mode=0755
+
 - name: create link
   file: src={{ item.src }} dest={{ item.dest }} state=link force=true
   with_items: "{{ links }}"
