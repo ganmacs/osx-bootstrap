@@ -78,7 +78,7 @@ homebrew_cask_packages:
   - vagrant
   - skim
   - amethyst
-  # - clipmenu https://github.com/caskroom/homebrew-cask/commit/067126917c87f4da91e26ba036799842a09a6a59
+  - clipy
 
 appstore_apps:
   - 443987910  # 1Password
