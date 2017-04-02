@@ -13,3 +13,4 @@ links:
   - { src: "{{ dotfiles }}/zsh"  , dest: "/Users/{{ ansible_user_id }}/.zsh" }
   - { src: "{{ dotfiles }}/hammerspoon"  , dest: "/Users/{{ ansible_user_id }}/.hammerspoon" }
   - { src: "{{ dotfiles }}/karabiner/karabiner.json"  , dest: "/Users/{{ ansible_user_id }}/.config/karabiner/karabiner.json" }
+  - { src: "{{ dotfiles }}/tmux/tmux.conf"  , dest: "/Users/{{ ansible_user_id }}/.tmux.conf" }
