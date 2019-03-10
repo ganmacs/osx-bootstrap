@@ -1,0 +1,12 @@
+- name: Install amethyst
+  homebrew_cask:
+    name:
+      - amethyst
+    state: present
+
+- name: Create symlink for amethyst
+  file:
+    src: "{{ dotfiles_path }}/amethyst/amethyst"
+    dest: "~/.amethyst"
+    state: link
+    force: true

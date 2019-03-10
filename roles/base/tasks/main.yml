@@ -1,0 +1,23 @@
+---
+
+- name: Create directory for ghq
+  file:
+    state: directory
+    path: "~/src/github.com/ganmacs"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0755
+
+- name: Clone dofiles repository
+  git:
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_path }}"
+    update: no
+
+- include: karabiner.yml
+- include: vim.yml
+- include: zsh.yml
+- include: git.yml
+- include: tmux.yml
+- include: amethyst.yml
+- include: iterm2.yml

@@ -9,7 +9,85 @@
   notify:
     - "{{ item.notify | default(omit) }}"
   with_items:
-    - "{{ osx_defaults }}"
+    - domain: com.apple.dock
+      key: autohide
+      type: bool
+      value: true
+      notify: "Restart Dock"
+    - domain: com.apple.dock
+      key: magnification
+      type: bool
+      value: true
+      notify: "Restart Dock"
+    - domain: com.apple.dock
+      key: mineffect
+      type: string
+      value: "scale"
+      notify: "Restart Dock"
+    - domain: com.apple.dock
+      key: largesize
+      type: float
+      value: 128
+      notify: "Restart Dock"
+    - domain: com.apple.dock
+      key: tilesize
+      type: float
+      value: 61
+      notify: "Restart Dock"
+    - domain: com.apple.dock
+      key: expose-group-by-app
+      type: bool
+      value: false
+      notify: "Restart Dock"
+    - domain: com.apple.finder
+      key: NewWindowTargetPath
+      type: string
+      value: "file:///Users/{{ansible_user_id}}/"
+      notify: "Restart Finder"
+    - domain: com.apple.AppleMultitouchTrackpad
+      key: Clicking
+      type: int
+      value: 1
+    - domain: com.apple.AppleMultitouchTrackpad
+      key: Dragging
+      type: int
+      value: 1
+    - domain: NSGlobalDomain
+      key: AppleHighlightColor
+      type: string
+      value: "1.000000 0.937255 0.690196 Yellow"
+    - domain: NSGlobalDomain
+      key: InitialKeyRepeat
+      type: int
+      value: 15
+    - domain: NSGlobalDomain
+      key: InitialKeyRepeat
+      type: int
+      value: 15
+    - domain: NSGlobalDomain
+      key: KeyRepeat
+      type: int
+      value: 2
+    - domain: NSGlobalDomain
+      key: AppleKeyboardUIMode
+      type: int
+      value: 3
+    - domain: NSGlobalDomain
+      key: com.apple.keyboard.fnState
+      type: bool
+      value: true
+    - domain: com.apple.loginwindow
+      key: GuestEnabled
+      type: bool
+      value: false
+    - domain: com.apple.menuextra.battery
+      key: ShowPercent
+      type: string
+      value: "YES"
+    - domain: com.apple.menuextra.clock
+      key: DateFormat
+      type: string
+      value: "EEE MMM d  H:mm"
 
-- name: set menuExtras
-  command: defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu", "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/TextInput.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
+- name: Set menuExtras
+  command: defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/User.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu" "/System/Library/CoreServices/Menu Extras/TextInput.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu"

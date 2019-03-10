@@ -1,0 +1,43 @@
+- name: Install zsh and its plugins
+  homebrew:
+    name:
+      - zsh
+      - zsh-syntax-highlighting
+      - zsh-completions
+      - fzf
+      - gawk
+      - gnu-sed
+      - gnu-tar
+      - grep
+      - ag
+      - jq
+      - htop
+    state: present
+
+- name: Create symlink for zshrc
+  file:
+    state: link
+    src: "{{ dotfiles_path }}/zsh/zshrc"
+    dest: "~/.zshrc"
+    force: true
+
+- name: Create symlink for zsh
+  file:
+    state: link
+    src: "{{ dotfiles_path }}/zsh"
+    dest: "~/.zsh"
+    force: true
+
+- name: Add zsh_path to /etc/shells
+  lineinfile:
+    dest: /etc/shells
+    line: "{{ homebrew_bin }}/zsh"
+    state: present
+    owner: root
+    group: wheel
+    mode: 0644
+  become: yes
+
+- name: Change shell to zsh
+  shell: chsh -s "{{ homebrew_bin }}/zsh"
+  become: no

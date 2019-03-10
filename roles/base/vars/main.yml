@@ -1,0 +1,3 @@
+---
+dotfiles_repo: https://github.com/ganmacs/dotfiles.git
+dotfiles_path: "~/src/github.com/ganmacs/dotfiles"

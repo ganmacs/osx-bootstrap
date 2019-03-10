@@ -1,0 +1,2 @@
+homebrew_prefix: "{{ lookup('env','HOMEBREW_PREFIX') }}"
+homebrew_bin: "{{ homebrew_prefix }}/bin"

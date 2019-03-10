@@ -1,14 +1,28 @@
----
-- include: emacs_build.yml
+- name: Install packages for emacs
+  homebrew:
+    name:
+      - emacs
+      - cask
+      - aspell
+      - markdown
+    state: present
 
-- name: clone emacs setting from github
-  git: >
-    repo={{ emacs_setting_repository }}
-    dest={{ emacs_repo }}
+- name: Clone emacs setting from github
+  git:
+    repo: "{{ emacs_setting_repository }}"
+    dest: "{{ emacs_repo }}"
+    update: no
 
-- name: create link .emacs.d from emacs.d
-  file: src={{ emacs_repo }} dest={{ dot_emacs }} state=link
-  ignore_errors: true
+- name: Create symlink .emacs.d
+  file:
+    state: link
+    src: "{{ emacs_repo }}"
+    dest: "{{ dot_emacs }}"
+    force: true
 
-- name: exec cask install
-  command: cask install chdir={{ dot_emacs }}
+- include: build.yml
+
+- name: Exec cask install
+  command: cask install
+  args:
+    chdir: "{{ dot_emacs }}"

@@ -22,7 +22,7 @@ if [ "$?" -ne 0 ]; then
 fi
 
 brew install ansible
-ansible-playbook -i localhost site.yml -K
+ansible-playbook site.yml -K
 
 popd > /dev/null
 

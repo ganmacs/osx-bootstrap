@@ -1,9 +1,10 @@
 ---
 
-- hosts: localhost
+- name: My macOS machine
+  hosts: localhost
   roles:
+    - base
     - osx-defaults
     - homebrew
-    - dotfiles
     - emacs
-    - apps
+    - ruby

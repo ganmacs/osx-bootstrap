@@ -1,0 +1,20 @@
+- name: Install karabiner-element
+  homebrew_cask:
+    name:
+      - karabiner-elements
+    state: present
+
+- name: Create .config/karabier
+  file:
+    path: "~/.config/karabiner"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0755
+
+- name: Create symlink for karabiner.json
+  file:
+    src: "{{ dotfiles_path }}/karabiner/karabiner.json"
+    dest: "/Users/{{ ansible_user_id }}/.config/karabiner/karabiner.json"
+    state: link
+    force: true

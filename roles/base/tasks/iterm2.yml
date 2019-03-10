@@ -1,0 +1,8 @@
+- name: Install iTerm2
+  homebrew_cask:
+    name:
+      - iterm2
+    state: present
+
+- name: Setup iterm2
+  command: defaults write com.googlecode.iterm2 PrefsCustomFolder -string "{{ dotfiles_path }}/iterm2"

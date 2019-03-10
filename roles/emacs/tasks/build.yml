@@ -1,0 +1,36 @@
+- name: Install build packages for emacs
+  homebrew:
+    name:
+      - readline
+      - autoconf
+      - autocode
+      - automake
+      - pkg-config
+      - gcc
+      - coreutils
+    state: present
+
+- name: Create sandbox direcotry
+  file:
+    state: directory
+    path: "{{ build_home }}"
+    owner: "{{ansible_user_id}}"
+    group: staff
+    mode: 0755
+
+- name: Download build script
+  get_url:
+    url: "https://gist.githubusercontent.com/ganmacs/7edeb01ae749e0d87c0e6ed0ace9f63b/raw/e3a52da5faae862569b86f6b16802f8d76e6e42f/emacs_build.sh"
+    dest: "{{ build_home }}/build.sh"
+    mode: 777
+
+- name: build emacs
+  command: bash -lc "./build.sh"
+  args:
+    chdir: "{{ build_home }}"
+
+- name: Move Emacs.app to Application
+  command: mv {{build_emacs_path}} /Applications/Emacs.app
+
+- name: Clean up file
+  command: rm -rf {{build_home}}

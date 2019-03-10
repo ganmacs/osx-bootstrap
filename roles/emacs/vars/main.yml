@@ -1,12 +1,11 @@
 ---
-home: /Users/{{ ansible_user_id }}
-build_home: "{{home}}/sandbox"
-dot_emacs: "{{ home }}/.emacs.d"
-emacs_repo: "{{ home }}/src/github.com/ganmacs/emacs.d"
+build_home: "~/sandbox"
+dot_emacs: "~/.emacs.d"
+emacs_repo: "~/src/github.com/ganmacs/emacs.d"
 
-emacs_file: emacs-25.1
+emacs_file: emacs-26.1
 emacs_file_tar: "{{emacs_file}}.tar.gz"
 build_emacs_path: "{{build_home}}/{{emacs_file}}/nextstep/Emacs.app"
-emacs_repository: http://ftpmirror.gnu.org/emacs/{{emacs_file_tar}}
-inline_path_path: https://gist.githubusercontent.com/takaxp/f30f54663c08e257b8846cc68b37f09f/raw/bbf307d220b23ce0ccec766c3ee23852e71c80df/emacs-25.1-inline.patch
-emacs_setting_repository: https://github.com/ganmacs/emacs.d.git
+emacs_repository: "http://ftpmirror.gnu.org/emacs/{{emacs_file_tar}}"
+inline_path_path: https://gist.githubusercontent.com/takaxp/5294b6c52782d0be0b25342be62e4a77/raw/9c9325288ff03a50ee26e4e32c8ca57c0dd81ace/emacs-25.2-inline-googleime.patch
+emacs_setting_repository: "https://github.com/ganmacs/emacs.d.git"

@@ -1,0 +1,13 @@
+- name: Install tmux
+  homebrew:
+    name:
+      - tmux
+      - reattach-to-user-namespace
+    state: present
+
+- name: Create symlink for tmux.conf
+  file:
+    state: link
+    src: "{{ dotfiles_path }}/tmux/tmux.conf"
+    dest: "~/.tmux.conf"
+    force: true
