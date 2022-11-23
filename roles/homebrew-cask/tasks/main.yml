@@ -1,0 +1,8 @@
+---
+- name: brew tap
+  homebrew_tap: tap={{ item }} state=present
+  with_items: "{{homebrew_tap_packages}}"
+
+- name: install homebrew-cask packages
+  homebrew_cask: name={{ item }} state=present
+  with_items: "{{homebrew_cask_packages}}"

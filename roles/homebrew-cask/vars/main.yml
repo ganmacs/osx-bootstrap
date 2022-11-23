@@ -1,0 +1,11 @@
+homebrew_tap_packages:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_packages:
+  - iterm2
+  - bettertouchtool
+  - amethyst
+  - clipy
+  - karabiner-elements
+  # - google-chrome

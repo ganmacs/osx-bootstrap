@@ -2,8 +2,8 @@
 
 - hosts: localhost
   roles:
-    - osx-defaults
     - homebrew
     - dotfiles
+    - homebrew-cask
     - emacs
-    - apps
+    - osx-defaults

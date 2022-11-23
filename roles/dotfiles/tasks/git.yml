@@ -1,0 +1,35 @@
+- name: Create symlink for zshrc
+  file:
+    src: "{{ dotfiles_path }}/zsh/zshrc"
+    dest: "~/.zshrc"
+    state: link
+    force: true
+
+- name: Create bin directory
+  file:
+    state: directory
+    path: "~/bin"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0755
+
+- name: Create symlink diff-highlight
+  file:
+    src: "{{ homebrew_prefix }}/share/git-core/contrib/diff-highlight/diff-highlight"
+    dest: "~/bin/diff-highlight"
+    state: link
+    force: true
+
+- name: Create symlink for gitignore
+  file:
+    src: "{{ dotfiles_path }}/git/gitignore_global"
+    dest: "~/.gitignore_global"
+    state: link
+    force: true
+
+- name: Create symlink for gitconfig
+  file:
+    src: "{{ dotfiles_path }}/git/gitconfig"
+    dest: "~/.gitconfig"
+    state: link
+    force: true

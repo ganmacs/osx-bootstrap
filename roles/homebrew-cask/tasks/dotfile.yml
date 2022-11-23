@@ -1,0 +1,27 @@
+# iterm2
+- name: Setup iterm2
+  command: defaults write com.googlecode.iterm2 PrefsCustomFolder -string "{{ dotfiles_path }}/iterm2"
+
+# karabiner
+- name: Create .config/karabier
+  file:
+    path: "~/.config/karabiner"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0755
+
+- name: Create symlink for karabiner.json
+  file:
+    src: "{{ dotfiles_path }}/karabiner/karabiner.json"
+    dest: "/Users/{{ ansible_user_id }}/.config/karabiner/karabiner.json"
+    state: link
+    force: true
+
+# amethyst
+- name: Create symlink for amethyst
+  file:
+    src: "{{ dotfiles_path }}/amethyst/amethyst"
+    dest: "~/.amethyst"
+    state: link
+    force: true

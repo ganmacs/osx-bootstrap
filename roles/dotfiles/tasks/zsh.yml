@@ -1,8 +1,27 @@
----
-- name: add shells to zsh_path
-  lineinfile: dest=/etc/shells line=/usr/local/bin/zsh state=present owner=root group=wheel mode=0644
-  sudo: yes
+- name: Create symlink for zshrc
+  file:
+    state: link
+    src: "{{ dotfiles_path }}/zsh/zshrc"
+    dest: "~/.zshrc"
+    force: true
 
-- name: change shell to zsh
-  shell: chsh -s /usr/local/bin/zsh
-  sudo: no
+- name: Create symlink for zsh
+  file:
+    state: link
+    src: "{{ dotfiles_path }}/zsh"
+    dest: "~/.zsh"
+    force: true
+
+- name: Add zsh_path to /etc/shells
+  lineinfile:
+    dest: /etc/shells
+    line: "{{ homebrew_bin }}/zsh"
+    state: present
+    owner: root
+    group: wheel
+    mode: 0644
+  become: yes
+
+- name: Change shell to zsh
+  shell: chsh -s "{{ homebrew_bin }}/zsh"
+  become: no

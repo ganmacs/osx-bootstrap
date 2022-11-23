@@ -1,53 +1,28 @@
 homebrew_packages:
-  - { name: peco }
-  - { name: htop }
-  - { name: tree }
-  - { name: nkf }
-  - { name: zsh}
-  - { name: zsh-completions }
-  - { name: zsh-syntax-highlighting }
-  - { name: git }
-  - { name: hub }
-  - { name: git-now }
-  - { name: go }
-  - { name: mysql }
-  - { name: mycli }
-  - { name: markdown }
-  - { name: coreutils }
-  - { name: ghq }
-  - { name: mercurial }
-  - { name: aspell }
-  - { name: gawk }
-  - { name: gnu-sed }
-  - { name: gnu-tar }
-  - { name: grep }
-  - { name: jq }
-  - { name: global }
-  - { name: gibo }
-  - { name: mecab }
-  - { name: rbenv }
-  - { name: tmux }
-  - { name: graphviz }
-  - { name: vim }
-  - { name: openssl }
-  - { name: readline }
-  - { name: ruby-build }
-  - { name: autoconf }
-  - { name: autocode }
-  - { name: automake }
-  - { name: cask }
-  - { name: icu4c }
-  - { name: pkg-config }
-  - { name: emacs }
-  - { name: gcc }
-  - { name: reattach-to-user-namespace }
-  - { name: direnv }
-
-homebrew_cask_packages:
-  - iterm2
-  - licecap
-  - google-chrome
-  - google-japanese-ime
-  - bettertouchtool
-  - amethyst
-  - clipy
+  # git
+  - git
+  - hub
+  - git-now
+  - ghq
+  - gibo
+  - tig
+  - htop
+  # zsh
+  - zsh
+  - zsh-syntax-highlighting
+  - zsh-completions
+  - fzf
+  - gawk
+  - gnu-sed
+  - gnu-tar
+  - grep
+  - ag
+  - jq
+  - htop
+  - aspell
+  # ruby
+  - rbenv
+  - ruby-build
+  # tmux
+  - tmux
+  - reattach-to-user-namespace
